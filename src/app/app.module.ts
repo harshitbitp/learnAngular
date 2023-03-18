@@ -3,14 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component';
+import { DatabindingComponent } from './databinding/databinding.component';
+import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
+//here we have registered the servercomponent in declaration.
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ServerComponent,
+    ServersComponent,
+    DatabindingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

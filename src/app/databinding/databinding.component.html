@@ -1,0 +1,40 @@
+<p><I><B>String interpolation</B></I></p>
+<p>everything that we write inside double curly bracket-- {{'I am String'}} will be converted into string finally </p>
+<h4>status is {{status}} for port {{serverPort}}  and serverNo {{serverNo}} </h4>
+<h4>Host name is {{getServerHostName()}}</h4>
+
+<br>
+<p><I><B>Property binding</B></I><br>
+  we are going to bind the attribute or property of the HTML element with the typescript code. 
+  Here we are binding disabled property of button. After 5 seconds, disabled(default is true) will become false.
+</p>
+
+<button class="btn btn-info" [disabled]="allowNewServer">Click</button>
+<BR>
+
+<p><I><B>Event binding</B></I><br>
+    We are going to use event binding to get some input or perform some methods from the template to typescript code by binding the events.<br>
+    We have binded click event here which will call the method when click event is triggered.
+    </p>
+  <button class="btn btn-success" (click)="createServer()">Create Server</button>
+  {{message}}
+  <!--use of ngIf with else(ng-template)-->
+  <p *ngIf="flag; else noVal">textval is {{textVal}}</p>
+  <ng-template #noVal>
+    <p> createServer method not called. textval is set to default {{textVal}}</p>
+  </ng-template>
+  <br>
+
+  <p><I><B>Use of event variable to log the info related to any event. Please check console while typing in the textbox</B></I><br></p>
+  <input type="text" class="form-control" (input)="onUpdateServer($event)">
+  {{textVal}}
+  <p><I><B>Two Way Binding</B></I><br>
+    For Two-Way-Binding (covered in the next lecture) to work, you need to enable the ngModel  directive. This is done by adding the FormsModule  to the imports[]  array in the AppModule.
+
+    You then also need to add the import from @angular/forms  in the app.module.ts file:
+    
+    import  FormsModule  from '@angular/forms'; </p>
+  <input type="text" class="form-control" [(ngModel)]="textVal">
+    {{textVal}} 
+
+<br>

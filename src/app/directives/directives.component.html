@@ -1,0 +1,11 @@
+<p>directives works!</p>
+
+<p><I><B>Two Way Binding</B></I><br>
+    For Two-Way-Binding (covered in the next lecture) to work, you need to enable the ngModel  directive. This is done by adding the FormsModule  to the imports[]  array in the AppModule.
+
+    You then also need to add the import from @angular/forms  in the app.module.ts file:
+    
+    import  FormsModule  from '@angular/forms'; </p>
+  <input type="text" class="form-control" [(ngModel)]="personName">
+    <button class="btn btn-info" (click)="addName()">Add name</button>
+    <h1 *ngFor="let n of names; let i = index">{{i}} {{')'}} {{n}}</h1>
