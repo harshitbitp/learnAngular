@@ -8,6 +8,7 @@ import { ServersComponent } from './servers/servers.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 //here we have registered the servercomponent in declaration.
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DirectivesComponent } from './directives/directives.component';
     ServerComponent,
     ServersComponent,
     DatabindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    TemplatedrivenComponent
   ],
   imports: [
     BrowserModule,
